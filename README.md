@@ -14,9 +14,7 @@ Summary: Descartes Labs Python Library
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/descarteslabs-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/descarteslabs-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/descarteslabs-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/descarteslabs-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/descarteslabs-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/descarteslabs-feedstock/branch/master)
+All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/descarteslabs-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/descarteslabs-feedstock)
 
 Current release info
 ====================
