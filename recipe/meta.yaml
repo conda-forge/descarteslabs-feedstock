@@ -20,6 +20,7 @@ requirements:
   run:
     - python
     - cachetools
+    - cloudpickle
     - six
     - requests >=2.16.0
 
