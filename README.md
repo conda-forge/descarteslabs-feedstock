@@ -14,12 +14,15 @@ Summary: Descartes Labs Python Library
 Current build status
 ====================
 
-All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/descarteslabs-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/descarteslabs-feedstock)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/descarteslabs-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/descarteslabs-feedstock)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/descarteslabs/badges/version.svg)](https://anaconda.org/conda-forge/descarteslabs)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/descarteslabs/badges/downloads.svg)](https://anaconda.org/conda-forge/descarteslabs)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-descarteslabs-green.svg)](https://anaconda.org/conda-forge/descarteslabs) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/descarteslabs.svg)](https://anaconda.org/conda-forge/descarteslabs) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/descarteslabs.svg)](https://anaconda.org/conda-forge/descarteslabs) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/descarteslabs.svg)](https://anaconda.org/conda-forge/descarteslabs) |
 
 Installing descarteslabs
 ========================
