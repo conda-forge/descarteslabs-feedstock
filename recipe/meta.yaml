@@ -1,4 +1,4 @@
-{% set version = "0.8.0" %}
+{% set version = "0.9.1" %}
 
 package:
   name: descarteslabs
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/d/descarteslabs/descarteslabs-{{ version }}.tar.gz
-  sha256: 01ad4d04e3fad2729f801a4c3065a2969e718b8cf0002bb2c5b8425db99eb8c8
+  sha256: 7e84f7439a832018fa01375addd0d3082c2c8066197de196f67f0d76da254e9b
 
 build:
   noarch: python
@@ -20,6 +20,8 @@ requirements:
   run:
     - python
     - cachetools
+    - cloudpickle
+    - futures  # [py2k]
     - six
     - requests >=2.16.0
 
