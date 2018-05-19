@@ -9,7 +9,6 @@ source:
   sha256: d436d6c37ddf0fe03ba4cda9d107e39be20a39cb744393f0e48f56ebb3ff6731
 
 build:
-  noarch: python
   number: 0
   script: python -m pip install --no-deps --ignore-installed .
 
@@ -20,6 +19,8 @@ requirements:
   run:
     - python
     - cachetools
+    - cloudpickle
+    - futures  # [py2k]
     - six
     - requests >=2.16.0
 
