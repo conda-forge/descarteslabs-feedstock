@@ -10,7 +10,10 @@ source:
 
 build:
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  noarch: python
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  entry_points:
+    - descarteslabs = descarteslabs.client.scripts.__main__:main
 
 requirements:
   build:
@@ -18,8 +21,8 @@ requirements:
     - pip
   run:
     - python
-    - cachetools
-    - cloudpickle
+    - cachetools >=2.0.1
+    - cloudpickle =0.4.0
     - futures  # [py2k]
     - six
     - requests >=2.16.0
