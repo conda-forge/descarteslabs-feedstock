@@ -17,13 +17,12 @@ build:
 
 requirements:
   build:
-    - python
+    - python >=3
     - pip
   run:
-    - python
+    - python >=3
     - cachetools >=2.0.1
     - cloudpickle =0.4.0
-    - futures  # [py2k]
     - six
     - requests >=2.16.0
 
