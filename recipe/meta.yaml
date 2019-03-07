@@ -1,4 +1,4 @@
-{% set version = "0.17.2" %}
+{% set version = "0.17.3" %}
 
 package:
   name: descarteslabs
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/d/descarteslabs/descarteslabs-{{ version }}.tar.gz
-  sha256: 24f8d41ca8a3e5fb0f1cdcabc26bb79ce18a370b772b4745e29061b3b72e5651
+  sha256: cfd10184102b2ccdc3b50eda2752a1dc3afd600055f4fa342a5291b36a08e753
 
 build:
   number: 0
