@@ -10,6 +10,7 @@ source:
 
 build:
   number: 0
+  skip: True  # [win and py2k]
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   entry_points:
     - descarteslabs = descarteslabs.client.scripts.__main__:main
