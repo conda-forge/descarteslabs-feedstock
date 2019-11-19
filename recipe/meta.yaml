@@ -1,4 +1,4 @@
-{% set version = "0.26.0" %}
+{% set version = "0.27.0" %}
 
 package:
   name: descarteslabs
@@ -6,28 +6,31 @@ package:
 
 source:
   url: https://pypi.io/packages/source/d/descarteslabs/descarteslabs-{{ version }}.tar.gz
-  sha256: 21d20a03ea340581f86c416345c55c4a98d809119eab1fe10fd316e86af862e5
+  sha256: 57d877585b7a0942950d1fd1b79d2a68522eb369fc5ef678af74bb53f8d0a459
 
 build:
   number: 0
-  noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  skip: True  # [win and py2k]
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   entry_points:
     - descarteslabs = descarteslabs.client.scripts.__main__:main
 
 requirements:
   build:
-    - python >=3
+    - python
     - pip
   run:
-    - python >=3
+    - python
+    - cloudpickle ==0.4.0
+    - six >=1.12
     - cachetools >=2.0.1
-    - cloudpickle =0.4.0
-    - six
-    - cachetools >=2.0.1
-    - geojson >=2.4.0
+    - futures  # [py27]
+    - geojson >=2.4.1
     - shapely >=1.6.3,<2
     - affine >=2.2.1
+    - pyarrow ==0.13.0
+    - grpcio >=1.16.1,<2
+    - protobuf ==3.8.0,<4
     - requests >=2.20.1,<3
 
 test:
@@ -36,7 +39,7 @@ test:
 
 about:
   home: https://github.com/descarteslabs/descarteslabs-python
-  license: Apache 2.0
+  license: Apache-2.0
   license_file: LICENSE
   summary: 'Descartes Labs Python Library'
 
