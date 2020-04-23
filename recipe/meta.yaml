@@ -1,4 +1,4 @@
-{% set version = "0.27.0" %}
+{% set version = "1.2.0" %}
 
 package:
   name: descarteslabs
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/d/descarteslabs/descarteslabs-{{ version }}.tar.gz
-  sha256: 57d877585b7a0942950d1fd1b79d2a68522eb369fc5ef678af74bb53f8d0a459
+  sha256: 496b338d07c3b9e20f97483efdf628261c5f3c28f1a126887c735a78c6885f96
 
 build:
   number: 0
-  skip: True  # [win and py2k]
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  skip: true  # [win and py2k]
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - descarteslabs = descarteslabs.client.scripts.__main__:main
 
@@ -41,7 +41,7 @@ about:
   home: https://github.com/descarteslabs/descarteslabs-python
   license: Apache-2.0
   license_file: LICENSE
-  summary: 'Descartes Labs Python Library'
+  summary: Descartes Labs Python Library
 
 extra:
   recipe-maintainers:
