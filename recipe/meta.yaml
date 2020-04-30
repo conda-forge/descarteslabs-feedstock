@@ -1,4 +1,4 @@
-{% set version = "0.28.1" %}
+{% set version = "1.2.0" %}
 
 package:
   name: descarteslabs
@@ -6,32 +6,36 @@ package:
 
 source:
   url: https://pypi.io/packages/source/d/descarteslabs/descarteslabs-{{ version }}.tar.gz
-  sha256: 4a697cd8a8b0ec53d6a525c23b3ec596fa9a1f50fea3ffcb680306284a31a4c7
+  sha256: 496b338d07c3b9e20f97483efdf628261c5f3c28f1a126887c735a78c6885f96
 
 build:
   number: 0
-  skip: True  # [win and py2k]
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  noarch: python
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - descarteslabs = descarteslabs.client.scripts.__main__:main
 
 requirements:
   build:
-    - python
+    - python >=3.5
     - pip
   run:
-    - python
-    - cloudpickle ==0.4.0
-    - six >=1.12
-    - cachetools >=2.0.1
-    - futures  # [py27]
-    - geojson >=2.4.1
-    - shapely >=1.6.3,<2
+    - python >=3.5
     - affine >=2.2.1
-    - pyarrow ==0.13.0
+    - cachetools >=2.0.1
+    - cloudpickle ==0.4.0
+    - geojson >=2.5.0
     - grpcio >=1.16.1,<2
-    - protobuf ==3.8.0,<4
+    - protobuf ==3.11.2,<4
+    - numpy >=1.17.4
+    - pyarrow
+    - pytz >=2019.1
+    # requests [security]
+    - pyopenssl
+    - cryptography
     - requests >=2.20.1,<3
+    - six >=1.12.0
+    - shapely >=1.6.3,<2
 
 test:
   imports:
@@ -41,7 +45,7 @@ about:
   home: https://github.com/descarteslabs/descarteslabs-python
   license: Apache-2.0
   license_file: LICENSE
-  summary: 'Descartes Labs Python Library'
+  summary: Descartes Labs Python Library
 
 extra:
   recipe-maintainers:
