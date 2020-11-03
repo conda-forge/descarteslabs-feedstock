@@ -41,15 +41,21 @@ requirements:
 
 test:
   requires:
+    - pytest==6.0.0
     - mock
+    - hypothesis==5.7.0
     - python-blosc
-    - pytest
     - responses
-    - hypothesis
-    - mercantile
+    # optional
+    - matplotlib-base>=3.0.3
+    - mercantile>=1.1.3
+    - ipyleaflet>=0.13.1,<1
+    - ipywidgets>=7.5.1,<8
+    - traitlets>=4.3.3,<5
+    - freezegun
   commands:
     # The first two are smoke tests skipped upstream, the last two required a login token.
-    - pytest --pyargs descarteslabs -k "not (test_metadata.py or test_raster.py or test_places_find or test_auth_login)"
+    - pytest -rfExXP --assert=plain --ignore-glob="*/smoke_tests" --ignore="descarteslabs/third_party/" --pyargs descarteslabs -k "not (test_metadata.py or test_raster.py or test_places_find or test_auth_login)"
   imports:
     - descarteslabs
 
