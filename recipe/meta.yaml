@@ -21,22 +21,22 @@ requirements:
     - pip
   run:
     - python
-    - affine >=2.2.1
+    - affine >=2.2.2
     - backports-datetime-fromisoformat >=1.0.0  # [py<37]
     - cachetools >=2.0.1
     - cloudpickle ==0.4.0  # [py<38]
     - cloudpickle ==1.6.0  # [py>=38]
     - geojson >=2.5.0
-    - grpcio >=1.16.1,<2
+    - grpcio >=1.31.0,<2
     - protobuf >=3.11.2,<4
-    - numpy >=1.17.4
-    - pyarrow >=0.17.1,<1
+    - numpy >=1.18.1
+    - pyarrow ==0.17.1
     - pytz >=2019.1
     # requests [security]
     - pyopenssl
     - cryptography
-    - requests >=2.20.1,<3
-    - six >=1.12.0
+    - requests >=2.22.0,<3
+    - six >=1.14.0
     - shapely >=1.6.3,<2
 
 test:
