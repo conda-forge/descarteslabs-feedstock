@@ -55,7 +55,7 @@ test:
     - freezegun
   commands:
     # The first two are smoke tests skipped upstream, the last two required a login token.
-    - pytest -rfExXP --assert=plain --ignore-glob="*/smoke_tests" --ignore="descarteslabs/third_party/" --pyargs descarteslabs -k "not (test_metadata.py or test_raster.py or test_places_find or test_auth_login)"
+    - pytest -rfExXP --assert=plain --ignore-glob="*/smoke_tests" --ignore="descarteslabs/third_party/" --pyargs descarteslabs -k "not (test_metadata.py or test_raster.py or test_places_find or test_auth_login or test_coverage)"
   imports:
     - descarteslabs
 
