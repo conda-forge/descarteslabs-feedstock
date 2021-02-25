@@ -1,4 +1,4 @@
-{% set version = "1.6.0" %}
+{% set version = "1.6.1" %}
 
 package:
   name: descarteslabs
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/descarteslabs/descarteslabs-python/archive/v{{ version }}.tar.gz
-  sha256: 879d28586a7b19b9483846e6d5b7e1d7f5f639668fe7065aa47c9299fa372680
+  sha256: 0c41e872609f4995a51aa226f16bc9d452d59b6b54b975e3ceb0f87439913852
 
 build:
   number: 0
@@ -55,7 +55,7 @@ test:
     - freezegun
   commands:
     # The first two are smoke tests skipped upstream, the last two required a login token.
-    - pytest -rfExXP --assert=plain --ignore-glob="*/smoke_tests" --ignore="descarteslabs/third_party/" --pyargs descarteslabs -k "not (test_metadata.py or test_raster.py or test_places_find or test_auth_login)"
+    - pytest -rfExXP --assert=plain --ignore-glob="*/smoke_tests" --ignore="descarteslabs/third_party/" --pyargs descarteslabs -k "not (test_metadata.py or test_raster.py or test_places_find or test_auth_login or test_coverage or test_fork_from_fork or test_wrapper_process or  test_wrapper_unused_in_main_process)"
   imports:
     - descarteslabs
 
