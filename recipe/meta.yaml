@@ -1,4 +1,4 @@
-{% set version = "1.7.0" %}
+{% set version = "1.7.1" %}
 
 package:
   name: descarteslabs
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/descarteslabs/descarteslabs-python/archive/v{{ version }}.tar.gz
-  sha256: bce93b2746864432b207eb0cdc96154db7d273a4c2c91e7116f9fca8cf2fbb4c
+  sha256: 154926c9c0854161686c11999178dfc8d429f0ad960e8afbb93b24be49663ea2
 
 build:
   number: 0
