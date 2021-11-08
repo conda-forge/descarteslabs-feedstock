@@ -1,4 +1,4 @@
-{% set version = "1.8.2" %}
+{% set version = "1.9.0" %}
 
 package:
   name: descarteslabs
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/descarteslabs/descarteslabs-python/archive/v{{ version }}.tar.gz
-  sha256: 1aab4998c25de79446423e43a397e14cdcedd21162a901fbbfad365d6c8ce210
+  sha256: 3c608b7c066aab5dd196d9b831e5a155641f6f09fc8e28d48315f03e1762d196
 
 build:
   number: 0
