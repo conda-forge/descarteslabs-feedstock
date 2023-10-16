@@ -1,4 +1,4 @@
-{% set version = "2.1.0" %}
+{% set version = "2.1.1" %}
 
 package:
   name: descarteslabs
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/descarteslabs/descarteslabs-python/archive/v{{ version }}.tar.gz
-  sha256: ab4de082eb56107a3fbd96cc51a0609f0317a96b68a04b49212d225b3a1af61c
+  sha256: 86648a3da3bfc57427674d1fbb3ab6ab283562360d06c7b017c372f9876deda9
 
 build:
   number: 0
@@ -20,6 +20,7 @@ requirements:
     - python >=3.7
     - pip
   run:
+    - blosc >=1.10.6
     - python >=3.7
     - affine >=2.2.2
     - python-blosc >=1.10.6
