@@ -1,4 +1,4 @@
-{% set version = "3.0.2" %}
+{% set version = "3.0.5" %}
 
 package:
   name: descarteslabs
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/descarteslabs/descarteslabs-python/archive/v{{ version }}.tar.gz
-  sha256: ffdc85a64c3c8400260ac77f9729e3c8fd9b870e46e76a04f9e8134fff4560e4
+  sha256: cce8f423fa96d344e90913eb38f6ceb902777f4709658cb1f4ed9b086c0ea380
 
 build:
   number: 0
@@ -20,6 +20,8 @@ requirements:
     - python >=3.8
     - pip
   run:
+    - blosc >=1.10.6
+    - imagecodecs >=2021.5.20
     - python >=3.8
     - numpy >=1.22.0
     - pyarrow >=14.0.1
@@ -39,7 +41,7 @@ requirements:
     - numpy >=1.22
     - pillow >=9.2.0
     - pytz >=2021.1
-    - requests  >=2.31.0,<3
+    - requests >=2.31.0,<3
     - setuptools >=65.6.3
     - shapely >=2.0.0
     - strenum >=0.4.8
