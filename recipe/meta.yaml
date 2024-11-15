@@ -1,4 +1,5 @@
-{% set version = "3.2.1" %}
+{% set python_min = "3.9" %}
+{% set version = "3.2.2" %}
 
 package:
   name: descarteslabs
@@ -6,7 +7,7 @@ package:
 
 source:
   url: https://github.com/descarteslabs/descarteslabs-python/archive/v{{ version }}.tar.gz
-  sha256: 1f418db8684eaa1e17c1531a2e96fd6cbd5e7f9e024a5fd65a668ac6a00f22ed
+  sha256: 183feec6da2edc4d2c5ffd51f2345e89f05465ac89cf019403f1172267b8828e
 
 build:
   number: 0
@@ -17,11 +18,11 @@ build:
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - setuptools
     - pip
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - affine >=2.2.2
     - cachetools >=3.1.1
     - dill >=0.3.6
@@ -49,6 +50,7 @@ test:
   source_files:
     - .
   requires:
+    - python {{ python_min }}
     - pip
     - pytest
     - mock
