@@ -1,5 +1,5 @@
 {% set python_min = "3.9" %}
-{% set version = "3.2.2" %}
+{% set version = "4.0.0" %}
 
 package:
   name: descarteslabs
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/descarteslabs/descarteslabs-python/archive/v{{ version }}.tar.gz
-  sha256: 183feec6da2edc4d2c5ffd51f2345e89f05465ac89cf019403f1172267b8828e
+  sha256: 4ca2e6e07957e5a5bd4fb7a03199ee6c5c596124069eaacf1c80dc1268983bda
 
 build:
   number: 0
@@ -22,6 +22,7 @@ requirements:
     - setuptools
     - pip
   run:
+    - blosc >=1.11.2
     - python >={{ python_min }}
     - affine >=2.2.2
     - cachetools >=3.1.1
